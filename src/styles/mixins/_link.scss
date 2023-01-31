@@ -1,0 +1,18 @@
+@mixin hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+@mixin link {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover { 
+        @include hover()
+    } 
+    &:active { 
+        font-weight: 500; 
+    }
+}

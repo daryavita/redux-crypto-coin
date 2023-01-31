@@ -1,0 +1,16 @@
+@import '../vendor/fonts/_fonts.scss';
+
+@mixin font-style($weight, $height, $size, $color) {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: $height;
+    font-size: $size;
+    color: $color;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+

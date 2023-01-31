@@ -1,0 +1,14 @@
+@import '../mixins/mixins';
+
+.navigation {
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content min-content;
+    justify-content: space-between;
+    gap: 30px;
+
+    &__link {
+        @include link;
+        @include font-style(400, 18px, 14px, $black);
+    }
+}

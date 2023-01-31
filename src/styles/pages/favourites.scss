@@ -1,0 +1,37 @@
+.fav {
+    // margin: 0px;
+    // padding: 0px 70px;
+    display: grid;
+    height: 100%;
+    grid-template-rows: min-content;
+
+
+    &__title {
+        @include font-style(800, 26px, 23px, $black);
+        text-align: center;
+        margin: 50px 70px;
+    }
+
+    &__sub-text {
+        @include font-style(400, 23px, 20px, $secondary);
+        text-align: center;
+        margin: 50px 70px;
+        align-self: center;
+    }
+
+    &__reset-text {
+        @include font-style(400, 18px, 14px, $black);
+        text-align: center;
+        margin: 50px 70px;
+        align-self: flex-end;
+    }
+
+    &__reset-link {
+        @include font-style(400, 18px, 14px, $black);
+        @include link;
+        text-decoration: underline;
+        text-decoration-color: $secondary;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+    }
+}

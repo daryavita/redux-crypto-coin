@@ -1,0 +1,20 @@
+.coin-page {
+
+    &__title {
+        @include font-style(800, 26px, 23px, $black);
+        text-align: center;
+        margin: 50px 70px;
+    }
+
+    &__loading {
+        @include font-style(500, 20px, 18px, $secondary);
+        text-align: center;
+        margin: 50px 70px;
+    }
+
+    &__error {
+        @include font-style(500, 20px, 18px, $error);
+        text-align: center;
+        margin: 50px 70px;
+    }
+}

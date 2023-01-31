@@ -1,0 +1,108 @@
+.search {
+  margin: 80px 70px 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__form {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: minmax(min-content, 1086px) 44px;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__input {
+    @include font-style(400, 18px, 14px, $black);
+    height: 50px;
+    background: $background;
+    border-radius: 8px;
+    border: none;
+    padding: 0 0 0 16px;
+    outline: none;
+
+    &:focus {
+      border-bottom: 1.5px solid $primary;
+    }
+
+    &::placeholder {
+      @include font-style(400, 18px, 14px, $placeholder);
+    }
+  }
+
+  &__btn {
+    background: $primary;
+    border-radius: 5px;
+    border: 0;
+    height: 44px;
+    background-image: url(../../images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center, 7px;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+      transition: 0.2s ease-out;
+    }
+  }
+
+  &__line {
+    border: none;
+    background-color: $background;
+    height: 1px;
+    max-width: 1140px;
+    margin: 40px 0 0;
+    padding: 0;
+  }
+
+  &__dropdown {
+    list-style: none;
+    position: absolute;
+    top: 42px;
+    left: 0px;
+    max-height: 200px;
+    width: 50%;
+    overflow-y: scroll;
+    box-shadow: -5px 5px 8px $background;
+    background: $white;
+    border-radius: 7px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__dropdown-item {
+    @include font-style(400, 18px, 14px, $black);
+    @include link;
+    border-radius: 7px;
+    padding: 7px 4px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background: $background;
+      transition: 0.6s ease-out;
+    }
+  }
+
+  &__coin-icon {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    margin: 0 10px 0 0;
+  }
+
+  &__error {
+    @include font-style(400, 18px, 14px, $error);
+    padding: 7px 4px;
+  }
+
+  &__loading {
+    @include font-style(400, 18px, 14px, $secondary);
+    padding: 7px 4px;
+  }
+}

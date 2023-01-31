@@ -1,0 +1,102 @@
+.card {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "info price"
+        "descript descript ";
+    padding: 0;
+    margin: 30px;
+        
+
+  &__logo {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 10px;
+  }
+
+  &__info {
+    display: flex;
+    grid-area: info;
+    align-items: center;
+  }
+
+  &__title {
+    @include font-style(500, 32px, 28px, $black);
+    margin: 5px;
+  }
+
+  &__like {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+    padding: 0px;
+    align-self: center;
+
+    &:hover {
+      @include hover()
+    }
+
+    &_white {
+      background-image: url(../../images/unlike.svg);
+    }
+
+    &_red {
+      background-image: url(../../images/like.svg);
+    }
+  }
+
+  &__delete {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    background-image: url(../../images/close.svg);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+    padding: 0px;
+    align-self: center;
+
+    &:hover {
+      @include hover()
+    }
+  }
+
+  &__description {
+    @include font-style(400, 24px, 16px, $black);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    grid-area: descript;
+    text-align: justify;
+
+    &:hover {
+      @include hover()
+    }
+
+    &_visible {
+        overflow: visible;
+        text-overflow: initial;
+        display: flex;
+    }
+  }
+
+  &__price {
+    @include font-style(500, 32px, 28px, $black);
+    grid-area: price;
+    align-self: center;
+    justify-self: end;
+    margin: 10px;
+
+  }
+}

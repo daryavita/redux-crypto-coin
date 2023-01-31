@@ -1,0 +1,40 @@
+.footer {
+    min-height: 80px;
+    background-color: $background;
+    margin: 0;
+    padding: 0 70px;
+
+    &__line {
+        border: none;
+        background-color: #dedbdb;
+        height: 1px;
+        max-width: 1140px;
+        margin: 20px auto;
+        padding: 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    &__author {
+        @include font-style(400, 18px, 14px, $black);
+    }
+
+    &__links {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__link {
+        @include font-style(400, 18px, 14px, $black);
+        @include link
+    }
+}
