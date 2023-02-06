@@ -8,11 +8,7 @@
   &__form {
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: minmax(min-content, 1086px) 44px;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
+    display: flex;
   }
 
   &__input {
@@ -23,6 +19,7 @@
     border: none;
     padding: 0 0 0 16px;
     outline: none;
+    width: 100%;
 
     &:focus {
       border-bottom: 1.5px solid $primary;

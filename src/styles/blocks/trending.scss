@@ -3,6 +3,8 @@
     box-shadow: 0px 0px 20px $background;
     border-radius: 10px;
     margin: 30px 70px;
+    display: flex;
+    flex-direction: column;
 
     &__title {
         @include font-style(700, 26px, 24px, $primary);
@@ -61,12 +63,12 @@
     &__loading {
         @include font-style(500, 20px, 18px, $secondary);
         text-align: center;
-        margin: 20px;
+        margin: 30px;
     }
 
     &__error {
         @include font-style(500, 20px, 18px, $error);
         text-align: center;
-        margin: 20px;
+        margin: 30px;
     }
 }
