@@ -1,13 +1,19 @@
-@import '../mixins/mixins';
-// @import '../base/colors';
+@import "../mixins/mixins";
 
 .main {
-    // margin: 0px;
-    // padding: 0px 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title title"
+    "search search"
+    "trending converter";
+  gap: 40px 70px;
+  margin: 70px auto;
 
-    &__title {
-        @include font-style(800, 26px, 23px, $black);
-        text-align: center;
-        margin: 50px 70px;
-    }
+  &__title {
+    @include font-style(800, 26px, 23px, $black);
+    text-align: center;
+    grid-area: title;
+  }
 }
