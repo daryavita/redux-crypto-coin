@@ -1,0 +1,43 @@
+.converter {
+  margin: 0px;
+  padding: 30px;
+  box-shadow: 0px 0px 20px $background;
+  border-radius: 10px;
+  grid-area: converter;
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+
+  &__title {
+    @include font-style(700, 26px, 24px, $secondary);
+    text-align: center;
+  }
+
+  &__currency-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+  }
+
+  &__input-amount {
+    @include font-style(400, 24px, 22px, $black);
+    height: 50px;
+    background: $background;
+    border-radius: 8px;
+    border: none;
+    padding: 0 0 0 16px;
+    outline: none;
+    width: 90%;
+
+    &:focus {
+      border-bottom: 1.5px solid $primary;
+    }
+  }
+
+  &__equal {
+    justify-self: center;
+    @include font-style(700, 30px, 28px, $secondary);
+  }
+}

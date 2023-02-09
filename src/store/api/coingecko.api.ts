@@ -43,9 +43,27 @@ export const coingeckoApi = createApi({
             query: () => ({
                 url: `search/trending`,
             }),
-            transformResponse: (res: { coins: Coins[] } ) => res.coins
+            transformResponse: (res: { coins: Coins[] }) => res.coins
         }),
+        getSupportedCurrencies: builder.query<string[], void>({
+            query: () => ({
+                url: `simple/supported_vs_currencies`,
+            }),
+        }),
+        getMarketData: builder.query({
+            query: (currency: string) => ({
+                url: `coins/markets`,
+                params: {
+                    vs_currency: currency,
+                    order: 'market_cap_desc',
+                    per_page: 50,
+                    page: 1,
+                    sparkline: false,
+                }
+            }),
+        }),
+
     })
 })
 
-export const { useSearchCoinsQuery, useLazySearchCoinsQuery, useLazyGetCoinDataQuery, useGetCoinDataQuery, useGetTrendingCoinsQuery} = coingeckoApi
+export const { useSearchCoinsQuery, useLazySearchCoinsQuery, useLazyGetCoinDataQuery, useGetCoinDataQuery, useGetTrendingCoinsQuery, useLazyGetMarketDataQuery, useGetMarketDataQuery, useGetSupportedCurrenciesQuery } = coingeckoApi
